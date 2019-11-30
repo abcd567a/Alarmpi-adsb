@@ -4,8 +4,9 @@ RESOURCE_FOLDER=/usr/share/pfclient
 sudo mkdir ${RESOURCE_FOLDER}
 echo "Downloading binary" ${BINARY} "for arm from Github"
 sudo wget -O ${RESOURCE_FOLDER}/${BINARY} "https://github.com/abcd567a/fr24feed-ArchLinux-Alarmpi/releases/download/v1/${BINARY}"
+sudo chmod +x ${RESOURCE_FOLDER}/${BINARY}
 sudo cp ${RESOURCE_FOLDER}/${BINARY} /usr/bin/pfclient
-sudo chmod +x /usr/bin/pfclient
+
 
 echo "Creating config file pfclient-config.json"
 CONFIG_FILE=/etc/pfclient-config.json
