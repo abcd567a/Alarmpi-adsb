@@ -1,4 +1,5 @@
 #!/bin/bash
+
 BINARY=pfclient_4.1.1_armhf
 RESOURCE_FOLDER=/usr/share/pfclient
 sudo mkdir ${RESOURCE_FOLDER}
