@@ -1,13 +1,13 @@
 #!/bin/bash
 
-BINARY=pfclient_4.1.1_i386
+BINARY_VERSION=pfclient_4.1.1_i386
 RESOURCE_FOLDER=/usr/share/pfclient
 sudo mkdir ${RESOURCE_FOLDER}
-echo "Downloading binary" ${BINARY}.tar.gz "for i386 from Planefinder.net"
+echo "Downloading i386 binary tarball " ${BINARY_VERSION}.tar.gz "from Planefinder.net"
 sudo pacman -S --needed wget
-sudo wget -O ${RESOURCE_FOLDER}/${BINARY}.tar.gz "client.planefinder.net/${BINARY}.tar.gz"
-sudo tar zxvf  ${BINARY}.tar.gz
-sudo cp ${RESOURCE_FOLDER}/${BINARY} /usr/bin/pfclient
+sudo wget -O ${RESOURCE_FOLDER}/${BINARY_VERSION}.tar.gz "http://client.planefinder.net/${BINARY_VERSION}.tar.gz"
+sudo tar zxvf  ${BINARY_VERSION}.tar.gz
+sudo cp ${RESOURCE_FOLDER}/pfclient /usr/bin/pfclient
 
 echo "installing lib32-glibc needed by pfclient i386 binary"
 sudo pacman -S lib32-glibc --needed
