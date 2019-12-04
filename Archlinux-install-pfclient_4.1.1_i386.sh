@@ -3,14 +3,14 @@
 BINARY=pfclient_4.1.1_i386
 RESOURCE_FOLDER=/usr/share/pfclient
 sudo mkdir ${RESOURCE_FOLDER}
-echo "Downloading binary" ${BINARY}.tar.gz "for arm from Planefinder.net"
+echo "Downloading binary" ${BINARY}.tar.gz "for i386 from Planefinder.net"
 sudo pacman -S --needed wget
 sudo wget -O ${RESOURCE_FOLDER}/${BINARY}.tar.gz "client.planefinder.net/${BINARY}.tar.gz"
 sudo tar zxvf  ${BINARY}.tar.gz
 sudo cp ${RESOURCE_FOLDER}/${BINARY} /usr/bin/pfclient
 
-echo "installing i386 library needed by pfclient
-sudo pacman -S lib32-glibc 
+echo "installing lib32-glibc needed by pfclient i386 binary"
+sudo pacman -S lib32-glibc --needed
 sudo ldconfig
 
 echo "Creating config file pfclient-config.json"
