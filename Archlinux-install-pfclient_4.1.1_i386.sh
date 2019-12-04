@@ -6,7 +6,7 @@ sudo mkdir ${RESOURCE_FOLDER}
 echo "Downloading i386 binary tarball " ${BINARY_VERSION}.tar.gz "from Planefinder.net"
 sudo pacman -S --needed wget
 sudo wget -O ${RESOURCE_FOLDER}/${BINARY_VERSION}.tar.gz "http://client.planefinder.net/${BINARY_VERSION}.tar.gz"
-sudo tar zxvf  ${BINARY_VERSION}.tar.gz
+sudo tar zxvf  ${RESOURCE_FOLDER}/${BINARY_VERSION}.tar.gz -C ${RESOURCE_FOLDER}
 sudo cp ${RESOURCE_FOLDER}/pfclient /usr/bin/pfclient
 
 echo "installing lib32-glibc needed by pfclient i386 binary"
