@@ -11,6 +11,7 @@ sudo cp ${RESOURCE_FOLDER}/pfclient /usr/bin/pfclient
 
 echo "installing lib32-glibc needed by pfclient i386 binary"
 sudo pacman -S lib32-glibc --needed
+echo "updating ldconfig"
 sudo ldconfig
 
 echo "Creating config file pfclient-config.json"
