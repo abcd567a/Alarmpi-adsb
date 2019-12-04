@@ -21,7 +21,6 @@ sudo chmod 777 ${CONFIG_FILE}
 echo "Writing code to config file pfclient-config.json"
 /bin/cat <<EOM >${CONFIG_FILE}
 {}
-
 EOM
 
 sudo chmod 666 ${CONFIG_FILE}
