@@ -64,7 +64,7 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-ads
 ```
 </br></br>
 
-## STEP 3 of 3: Install Planefinder feeder On Alarmpi:</br>
+## STEP 3 of 3: Install Planefinder feeder:</br>
 
 ```
 sudo pacman -S --needed wget
