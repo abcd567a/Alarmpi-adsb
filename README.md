@@ -40,8 +40,8 @@ and a rotating wheel will appear on map, or map will not show
 
 **(2) To make SkyView Map show range rings, do following:**
 
-1. Open file "dump1090-fa" for editing
-    sudo nano  /etc/default/dump1090-fa
+1. Open file "dump1090-fa" for editing </br>
+    `sudo nano  /etc/default/dump1090-fa`
 
 2. In the opened file, go to following line:
     RECEIVER_OPTIONS="--device-index 0 --gain -10 --ppm 0 --net-bo-port 30005"
