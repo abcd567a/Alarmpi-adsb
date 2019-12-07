@@ -58,10 +58,6 @@ and a rotating wheel will appear on map, or map will not show
 
 ## STEP 2 of 3: Install FlightRadar24 feeder
 
-</br></br>
-
-## STEP 2 of 3: Install FlightRadar24 feeder On Alarmpi:</br>
-
 ```
 sudo pacman -S --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-fr24feed_1.0.24-7_arm.sh)"
