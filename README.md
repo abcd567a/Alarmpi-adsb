@@ -4,7 +4,7 @@
 ## STEP 1 of 3: Install dump1090-fa </br>
 
 ```
-sudo pacman -S --needed git
+sudo pacman -Syy --needed git binutils make fakeroot pkgconf gcc 
 
 git clone https://github.com/abcd567a/dump1090-fa-arch.git  
 
