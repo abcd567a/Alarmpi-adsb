@@ -4,7 +4,7 @@
 ## STEP 1 of 3: Install dump1090-fa </br>
 
 ```
-sudo pacman -Syy --needed git binutils make fakeroot pkgconf gcc 
+sudo pacman -Sy --needed git binutils make fakeroot pkgconf gcc 
 
 git clone https://github.com/abcd567a/dump1090-fa-arch.git  
 
@@ -59,7 +59,7 @@ and a rotating wheel will appear on map, or map will not show
 ## STEP 2 of 3: Install FlightRadar24 feeder
 
 ```
-sudo pacman -S --needed wget
+sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-fr24feed_armv7.sh)"
 ```
 </br></br>
@@ -67,7 +67,7 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-ads
 ## STEP 3 of 3: Install Planefinder feeder:</br>
 
 ```
-sudo pacman -S --needed wget
+sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-pfclient_armhf.sh)"
 ```
 
