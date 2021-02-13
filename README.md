@@ -60,7 +60,7 @@ and a rotating wheel will appear on map, or map will not show
 
 ```
 sudo pacman -S --needed wget
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-fr24feed_1.0.24-7_arm.sh)"
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-fr24feed_armv7.sh)"
 ```
 </br></br>
 
@@ -68,6 +68,6 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-ads
 
 ```
 sudo pacman -S --needed wget
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-pfclient_4.1.1_armhf.sh)"
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-pfclient_armhf.sh)"
 ```
 
