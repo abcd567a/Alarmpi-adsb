@@ -1,10 +1,10 @@
 #!/bin/bash
 
-BINARY=fr24feed_1.0.24-7_armhf
+BINARY=fr24feed_1.0.26-9_armhf
 RESOURCE_FOLDER=/usr/share/fr24feed
 sudo mkdir ${RESOURCE_FOLDER}
 echo "Downloading binary" ${BINARY} "for armhf from Github"
-sudo wget -O ${RESOURCE_FOLDER}/${BINARY} "https://github.com/abcd567a/ArchLinux-Alarmpi-adsb/releases/download/v1/${BINARY}"
+sudo wget -O ${RESOURCE_FOLDER}/${BINARY} "https://github.com/abcd567a/Alarmpi-adsb/releases/download/v1/${BINARY}"
 sudo chmod +x ${RESOURCE_FOLDER}/${BINARY}
 sudo cp ${RESOURCE_FOLDER}/${BINARY} /usr/bin/fr24feed
 
