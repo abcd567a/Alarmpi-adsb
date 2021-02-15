@@ -1,5 +1,5 @@
 # Alarmpi-adsb
-### The details below describbe how to install following items on Alarmpi OS (Arch Linux Arm for Pi) :
+### The details below describbe how to install following items on Alarmpi OS (Arch Linux Arm for Pi) on Rapberry Pi:
 **1 - Decoder (dump1090-fa)** </br>
 **2 - Flightradar24 Feeder (fr24feed)** </br>
 **3 - Planefinder Feeder (pfclient)** </br>
