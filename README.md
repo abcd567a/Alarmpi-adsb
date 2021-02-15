@@ -1,5 +1,6 @@
-# Alarmpi-adsb
-### The details below describbe how to install following items on Alarmpi OS on Rapberry Pi:
+# Alarmpi-adsb 
+### Install ADS-B Software on Arch Linux Arm OS on Raspberry Pi (Alarmpi OS)
+### The details below describe how to install following items:
 **1 - Decoder (dump1090-fa)** </br>
 **2 - Flightradar24 Feeder (fr24feed)** </br>
 **3 - Planefinder Feeder (pfclient)** </br>
