@@ -1,7 +1,13 @@
 # Alarmpi-adsb
+### The details below describbe how to install following items on Alarmpi OS (Arch Linux Arm for Pi) :
+**1 - Decoder (dump1090-fa)** </br>
+**2 - Flightradar24 Feeder (fr24feed)** </br>
+**3 - Planefinder Feeder (pfclient)** </br>
+**4 - Flightaware Feeder (piaware)** </br>
+
 </br>
 
-## STEP 1 of 3: Install dump1090-fa </br>
+## (1) - Install Decoder - dump1090-fa (on Armv7 and AArch64 OS)</br>
 
 ```
 sudo pacman -Sy --needed git binutils make fakeroot pkgconf gcc 
@@ -56,7 +62,7 @@ and a rotating wheel will appear on map, or map will not show
 4. Clear browser cache and reload browser
 </br></br>
 
-## STEP 2 of 3: Install FlightRadar24 feeder
+## (2) - Install FlightRadar24 feeder - fr24feed (on Armv7 OS ONLY): </br>
 
 ```
 sudo pacman -Sy --needed wget
@@ -64,10 +70,17 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-ads
 ```
 </br></br>
 
-## STEP 3 of 3: Install Planefinder feeder:</br>
+## (3) - Install Planefinder feeder - pfclient (on Armv7 and AArch64 OS): </br>
 
 ```
 sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/Alarmpi-install-pfclient_armhf.sh)"
 ```
+</br></br>
 
+## (4) - Install Flightaware feeder - piaware (on Armv7 and AArch64 OS): </br>
+
+### https://github.com/abcd567a/piaware-arch/blob/main/README.md
+
+</br>
+</br>
