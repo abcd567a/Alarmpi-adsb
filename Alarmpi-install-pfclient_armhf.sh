@@ -1,12 +1,12 @@
 #!/bin/bash
 
-BINARY=pfclient_4.2.70_armhf
+TARBALL=pfclient_5.0.161_armhf.tar.gz
 RESOURCE_FOLDER=/usr/share/pfclient
 sudo mkdir ${RESOURCE_FOLDER}
-echo "Downloading binary" ${BINARY} "for arm from Github"
-sudo wget -O ${RESOURCE_FOLDER}/${BINARY} "https://github.com/abcd567a/Alarmpi-adsb/releases/download/v1/${BINARY}"
-sudo chmod +x ${RESOURCE_FOLDER}/${BINARY}
-sudo cp ${RESOURCE_FOLDER}/${BINARY} /usr/bin/pfclient
+echo "Downloading tarball" ${TARBALL} "from Planefinder"
+sudo wget -O ${RESOURCE_FOLDER}/${TARBALL} "http://client.planefinder.net/${TARBALL}"
+sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${TARBALL} -C ${RESOURCE_FOLDER}
+sudo cp ${RESOURCE_FOLDER}/${TARBALL} /usr/bin/pfclient
 
 
 echo "Creating config file pfclient-config.json"
