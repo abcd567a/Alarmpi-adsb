@@ -6,7 +6,8 @@ sudo mkdir ${RESOURCE_FOLDER}
 echo "Downloading tarball" ${TARBALL} "from Planefinder"
 sudo wget -O ${RESOURCE_FOLDER}/${TARBALL} "http://client.planefinder.net/${TARBALL}"
 sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${TARBALL} -C ${RESOURCE_FOLDER}
-sudo cp ${RESOURCE_FOLDER}/${TARBALL} /usr/bin/pfclient
+
+sudo cp ${RESOURCE_FOLDER}/pfclient /usr/bin/
 
 
 echo "Creating config file pfclient-config.json"
