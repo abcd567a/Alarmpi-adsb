@@ -1,12 +1,15 @@
 #!/bin/bash
 
-BINARY=fr24feed_1.0.26-9_armhf
-RESOURCE_FOLDER=/usr/share/fr24feed
-sudo mkdir ${RESOURCE_FOLDER}
-echo "Downloading binary" ${BINARY} "for armhf from Github"
-sudo wget -O ${RESOURCE_FOLDER}/${BINARY} "https://github.com/abcd567a/Alarmpi-adsb/releases/download/v1/${BINARY}"
-sudo chmod +x ${RESOURCE_FOLDER}/${BINARY}
-sudo cp ${RESOURCE_FOLDER}/${BINARY} /usr/bin/fr24feed
+DEB_PACKAGE=fr24feed_1.0.29-8_armhf.deb
+RESOURCE_FOLDER=/usr/share/fr24feed-armhf
+EXTRACTED_FOLDER=extracted
+sudo mkdir -p ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}
+echo "Downloading Deb Package" ${DEB_PACKAGE} "for armhf from Flightradar24"
+sudo wget -O ${RESOURCE_FOLDER}/${DEB_PACKAGE} "http://repo-feed.flightradar24.com/rpi_binaries/${DEB_PACKAGE}"
+sudo ar x ${RESOURCE_FOLDER}/${DEB_PACKAGE} --output=${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}
+sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}/data.tar.gz -C ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}
+sudo cp ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}/usr/bin/fr24feed  /usr/bin/fr24feed
+sudo cp ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}/usr/bin/fr24feed-status  /usr/bin/fr24feed-status
 
 echo "Creating config file fr24feed.ini"
 CONFIG_FILE=/etc/fr24feed.ini
@@ -14,19 +17,15 @@ sudo touch ${CONFIG_FILE}
 sudo chmod 777 ${CONFIG_FILE}
 echo "Writing code to config file fr24feed.ini"
 /bin/cat <<EOM >${CONFIG_FILE}
-receiver="beast-tcp"
-host="127.0.0.1:30005"
+receiver="avr-tcp"
+host="127.0.0.1:30002"
 fr24key=""
 
 bs="no"
 raw="no"
 logmode="1"
-windowmode="0"
-mpx="no"
 mlat="yes"
 mlat-without-gps="yes"
-use-http=yes
-http-timeout=20
 
 EOM
 
