@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEB_PACKAGE=fr24feed_1.0.29-8_armhf.deb
-RESOURCE_FOLDER=/usr/share/fr24feed-armhf
+RESOURCE_FOLDER=/usr/share/fr24feed
 EXTRACTED_FOLDER=extracted
 sudo mkdir -p ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}
 echo "Downloading Deb Package" ${DEB_PACKAGE} "for armhf from Flightradar24"
