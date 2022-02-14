@@ -10,6 +10,9 @@ sudo ar x ${RESOURCE_FOLDER}/${DEB_PACKAGE} --output=${RESOURCE_FOLDER}/${EXTRAC
 sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}/data.tar.gz -C ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}
 sudo cp ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}/usr/bin/fr24feed  /usr/bin/fr24feed
 sudo cp ${RESOURCE_FOLDER}/${EXTRACTED_FOLDER}/usr/bin/fr24feed-status  /usr/bin/fr24feed-status
+sudo wget -O ${RESOURCE_FOLDER}/init-functions https://raw.githubusercontent.com/abcd567a/Alarmpi-adsb/master/lsb/init-functions
+sudo mkdir /lib/lsb
+sudo cp ${RESOURCE_FOLDER}/init-functions /lib/lsb/
 
 echo "Creating config file fr24feed.ini"
 CONFIG_FILE=/etc/fr24feed.ini
